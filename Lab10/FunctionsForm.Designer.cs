@@ -64,8 +64,9 @@
             this.DrawButton.TabIndex = 2;
             this.DrawButton.Text = "Draw";
             this.DrawButton.UseVisualStyleBackColor = true;
+            this.DrawButton.Click += new System.EventHandler(this.DrawButton_Click);
             // 
-            // Form1
+            // FunctionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,8 +74,8 @@
             this.Controls.Add(this.DrawButton);
             this.Controls.Add(this.FunctionsComboBox);
             this.Controls.Add(this.FunctionsLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FunctionsForm";
+            this.Text = "Trigonometry Draw";
             this.ResumeLayout(false);
             this.PerformLayout();
 
