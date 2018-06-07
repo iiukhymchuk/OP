@@ -1,6 +1,6 @@
 ﻿namespace Lab10
 {
-    partial class Form1
+    partial class FunctionsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -64,6 +64,7 @@
             this.DrawButton.TabIndex = 2;
             this.DrawButton.Text = "Draw";
             this.DrawButton.UseVisualStyleBackColor = true;
+            this.DrawButton.Click += new System.EventHandler(this.DrawButton_Click);
             // 
             // Form1
             // 
