@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab10.Functions;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,6 +8,8 @@ namespace Lab10
     public partial class FunctionsForm : Form
     {
         static Graphics graphics;
+        static string previousFunctionName;
+
 
         public FunctionsForm()
         {
@@ -17,7 +20,17 @@ namespace Lab10
 
         private void DrawButton_Click(object sender, EventArgs e)
         {
-            Coordinates.DrawCoordinates(graphics);
+            var functionName = this.FunctionsComboBox.Text;
+            if (functionName == previousFunctionName || functionName == string.Empty)
+            {
+                return;
+            }
+            previousFunctionName = functionName;
+
+            var function = FunctionFactory.Create(functionName);
+            function.Draw(graphics);
+
+            //Coordinates.DrawCoordinates(graphics);
         }
 
         private void FunctionsForm_Paint(object sender, PaintEventArgs e)

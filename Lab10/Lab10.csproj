@@ -52,7 +52,12 @@
     <Compile Include="FunctionsForm.Designer.cs">
       <DependentUpon>FunctionsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functions\Sin.cs" />
+    <Compile Include="Functions\CosFunction.cs" />
+    <Compile Include="Functions\CotanFunction.cs" />
+    <Compile Include="Functions\FunctionFactory.cs" />
+    <Compile Include="Interfaces\ITrigonometricFunction.cs" />
+    <Compile Include="Functions\SinFunction.cs" />
+    <Compile Include="Functions\TanFunction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FunctionsForm.resx">
