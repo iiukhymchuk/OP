@@ -45,12 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coordinates.cs" />
     <Compile Include="FunctionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FunctionsForm.Designer.cs">
       <DependentUpon>FunctionsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\Sin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FunctionsForm.resx">
