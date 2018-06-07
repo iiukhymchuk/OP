@@ -64,7 +64,6 @@
             this.DrawButton.TabIndex = 2;
             this.DrawButton.Text = "Draw";
             this.DrawButton.UseVisualStyleBackColor = true;
-            this.DrawButton.Click += new System.EventHandler(this.DrawButton_Click);
             // 
             // Form1
             // 
