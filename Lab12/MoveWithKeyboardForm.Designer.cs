@@ -1,6 +1,6 @@
-﻿namespace Lab11
+﻿namespace Lab12
 {
-    partial class MovingObjectForm
+    partial class MoveWithKeyboardForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.PictureBox = new System.Windows.Forms.PictureBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,27 +38,21 @@
             this.PictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PictureBox.ErrorImage = null;
             this.PictureBox.InitialImage = null;
-            this.PictureBox.Location = new System.Drawing.Point(12, 12);
+            this.PictureBox.Location = new System.Drawing.Point(0, 0);
             this.PictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(776, 426);
+            this.PictureBox.Size = new System.Drawing.Size(1184, 661);
             this.PictureBox.TabIndex = 0;
             this.PictureBox.TabStop = false;
-            this.PictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBox_Paint);
             // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // MovingObjectForm
+            // MoveWithKeyboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.PictureBox);
-            this.Name = "MovingObjectForm";
-            this.Text = "Moving object";
+            this.Name = "MoveWithKeyboardForm";
+            this.Text = "Move with keybord";
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -69,7 +61,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox PictureBox;
-        private System.Windows.Forms.Timer timer;
     }
 }
 
