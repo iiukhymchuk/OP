@@ -1,5 +1,4 @@
-﻿using Lab10.Functions;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,6 +9,14 @@ namespace Lab10
         static Graphics graphics;
         static string previousFunctionName;
 
+        static PointF[] pointsSin = new PointF[750];
+        static bool pointsCreatedSin = false;
+        static PointF[] pointsCos = new PointF[750];
+        static bool pointsCreatedCos = false;
+        static PointF[] pointsTan = new PointF[750];
+        static bool pointsCreatedTan = false;
+        private PointF[] pointsCotan = new PointF[750];
+        private bool pointsCreatedCotan = false;
 
         public FunctionsForm()
         {
@@ -29,14 +36,61 @@ namespace Lab10
             }
             previousFunctionName = functionName;
 
-            var function = FunctionFactory.Create(functionName);
             graphics.Clear(Color.LightGray);
-            function.Draw(graphics);
+            if (functionName == "sin(x)")
+            {
+                if (!pointsCreatedSin)
+                {
+                    pointsSin = Utils.CreatePoints(pointsSin, Math.Sin);
+                    pointsCreatedSin = true;
+                }
+
+                graphics.DrawLines(Pens.Blue, pointsSin);
+            }
+            else if (functionName == "cos(x)")
+            {
+                if (!pointsCreatedCos)
+                {
+                    pointsCos = Utils.CreatePoints(pointsCos, Math.Cos);
+                    pointsCreatedCos = true;
+                }
+
+                graphics.DrawLines(Pens.Blue, pointsCos);
+            }
+            else if (functionName == "tan(x)")
+            {
+                if (!pointsCreatedTan)
+                {
+                    pointsTan = Utils.CreatePoints(pointsTan, Math.Tan);
+                    pointsCreatedTan = true;
+                }
+
+                graphics.DrawLines(Pens.Blue, pointsTan);
+            }
+            else if (functionName == "cotan(x)")
+            {
+                if (!pointsCreatedCotan)
+                {
+                    pointsCotan = Utils.CreatePoints(pointsCotan, Cotangent);
+                    pointsCreatedCotan = true;
+                }
+
+                graphics.DrawLines(Pens.Blue, pointsCotan);
+            }
 
             Coordinates.DrawCoordinates(graphics);
         }
 
-        private void FunctionsForm_Paint(object sender, PaintEventArgs e)
+        static double Cotangent(double x)
+        {
+            if (x == 0)
+            {
+                return 1000;
+            }
+            return 1.0 / Math.Tan(x);
+        }
+
+        void FunctionsForm_Paint(object sender, PaintEventArgs e)
         {
             Coordinates.DrawCoordinates(graphics);
         }

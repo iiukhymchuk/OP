@@ -21,5 +21,10 @@ namespace Lab10
 
             return points;
         }
+
+        internal static object CreatePoints(object pointsCotan, Func<double, double> cotangent)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
