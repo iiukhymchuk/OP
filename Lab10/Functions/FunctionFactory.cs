@@ -9,19 +9,19 @@ namespace Lab10.Functions
         {
             if (functionName == "sin(x)")
             {
-                return new SinFunction();
+                return SinFunction.getInstance();
             }
             if (functionName == "cos(x)")
             {
-                return new CosFunction();
+                return CosFunction.getInstance();
             }
             if (functionName == "tan(x)")
             {
-                return new TanFunction();
+                return TanFunction.getInstance();
             }
             if (functionName == "cotan(x)")
             {
-                return new CotanFunction();
+                return CotanFunction.getInstance();
             }
             throw new InvalidOperationException();
         }
