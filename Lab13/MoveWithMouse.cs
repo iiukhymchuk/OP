@@ -24,7 +24,7 @@ namespace Lab13
         {
             if (e.Button == MouseButtons.Left)
             {
-                Point temp = firstPoint = Control.MousePosition;
+                Point temp = Control.MousePosition;
                 Point res = new Point(firstPoint.X - temp.X, firstPoint.Y - temp.Y);
 
                 pictureBox1.Location = new Point(pictureBox1.Location.X - res.X, pictureBox1.Location.Y - res.Y);
