@@ -18,16 +18,16 @@ namespace Lab10
             graphics.DrawLine(pen, xStart, xEnd);
             graphics.DrawLine(pen, yStart, yEnd);
 
-            graphics.DrawString("-3/2π", SystemFonts.DefaultFont, Brushes.Black, 75, 150);
-            graphics.DrawString("-π", SystemFonts.DefaultFont, Brushes.Black, 175, 150);
-            graphics.DrawString("-π/2", SystemFonts.DefaultFont, Brushes.Black, 275, 150);
+            graphics.DrawString("-3/2π", SystemFonts.DefaultFont, Brushes.Black, 93.75f, 150);
+            graphics.DrawString("-π", SystemFonts.DefaultFont, Brushes.Black, 187.5f, 150);
+            graphics.DrawString("-π/2", SystemFonts.DefaultFont, Brushes.Black, 281.25f, 150);
             graphics.DrawString("0", SystemFonts.DefaultFont, Brushes.Black, 375, 150);
-            graphics.DrawString("π/2", SystemFonts.DefaultFont, Brushes.Black, 475, 150);
-            graphics.DrawString("π", SystemFonts.DefaultFont, Brushes.Black, 575, 150);
-            graphics.DrawString("3/2π", SystemFonts.DefaultFont, Brushes.Black, 675, 150);
+            graphics.DrawString("π/2", SystemFonts.DefaultFont, Brushes.Black, 468.75f, 150);
+            graphics.DrawString("π", SystemFonts.DefaultFont, Brushes.Black, 562.5f, 150);
+            graphics.DrawString("3/2π", SystemFonts.DefaultFont, Brushes.Black, 656.25f, 150);
 
-            graphics.DrawString("1", SystemFonts.DefaultFont, Brushes.Black, 375, 50);
-            graphics.DrawString("-1", SystemFonts.DefaultFont, Brushes.Black, 375, 250);
+            graphics.DrawString("1", SystemFonts.DefaultFont, Brushes.Black, 375, 86.3f);
+            graphics.DrawString("-1", SystemFonts.DefaultFont, Brushes.Black, 375, 213.7f);
 
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
         }

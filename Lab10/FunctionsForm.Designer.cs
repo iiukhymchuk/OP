@@ -74,6 +74,8 @@
             this.graphBox.ErrorImage = null;
             this.graphBox.InitialImage = null;
             this.graphBox.Location = new System.Drawing.Point(20, 100);
+            this.graphBox.Margin = new System.Windows.Forms.Padding(0);
+            this.graphBox.MaximumSize = new System.Drawing.Size(750, 300);
             this.graphBox.Name = "graphBox";
             this.graphBox.Size = new System.Drawing.Size(750, 300);
             this.graphBox.TabIndex = 0;
