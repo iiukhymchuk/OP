@@ -100,7 +100,7 @@ namespace Lab12
                 xActive -= 10;
             }
 
-            // Left
+            // Right
             if (e.KeyChar.Equals(Convert.ToChar(100))) // D
             {
                 if (currentActive == Raccoon.First)
